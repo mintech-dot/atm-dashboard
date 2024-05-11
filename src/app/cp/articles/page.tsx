@@ -14,7 +14,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
-
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import {
@@ -111,8 +111,8 @@ export const columns: ColumnDef<Payment>[] = [
               Copy author ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View author</DropdownMenuItem>
-            <DropdownMenuItem>View article details</DropdownMenuItem>
+            <DropdownMenuItem><Link href="/cp/users-details">View author</Link></DropdownMenuItem>
+            <DropdownMenuItem>View Demo</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       )

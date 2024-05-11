@@ -22,14 +22,12 @@ import {
 export default function CardWithForm() {
   return (
     <>
-      
       <Card className="w-container sm:mx-8 md:mx-12 lg:mx-28 my-8">
         <CardHeader>
           <CardTitle>Update User Info</CardTitle>
-          
         </CardHeader>
-        <CardContent>
-          <form>
+        <form>
+          <CardContent>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="user">User</Label>
@@ -37,15 +35,27 @@ export default function CardWithForm() {
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="name">Email</Label>
-                <Input type="email" id="email" placeholder="Mintech@protonmail.com" />
+                <Input
+                  type="email"
+                  id="email"
+                  placeholder="Mintech@protonmail.com"
+                />
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="name">Password</Label>
-                <Input type="password" id="password" placeholder="enter user's password" />
+                <Input
+                  type="password"
+                  id="password"
+                  placeholder="enter user's password"
+                />
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="name">Update Password</Label>
-                <Input type="password" id="update_password" placeholder=" Update password" />
+                <Input
+                  type="password"
+                  id="update_password"
+                  placeholder=" Update password"
+                />
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="framework">Role</Label>
@@ -61,11 +71,12 @@ export default function CardWithForm() {
                 </Select>
               </div>
             </div>
-          </form>
-        </CardContent>
-        <CardFooter className="flex justify-end">
-          <Button>Update</Button>
-        </CardFooter>
+          </CardContent>
+          <CardFooter className="flex justify-end gap-2">
+            <Button variant="destructive">Delete</Button>
+            <Button>Update</Button>
+          </CardFooter>
+        </form>
       </Card>
     </>
   );
